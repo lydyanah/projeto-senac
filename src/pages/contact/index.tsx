@@ -4,9 +4,7 @@ const Contact = () => {
   return (
     <>
       <ExternalPage />
-      <header>
-        <h1>Contato</h1>
-      </header>
+      <h1>Contato</h1>
     </>
   );
 };

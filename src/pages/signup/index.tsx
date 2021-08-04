@@ -1,12 +1,12 @@
 import ExternalPage from "../../components/ExternalPage/ExternalPage";
 
-const About = () => {
+const Signup = () => {
   return (
     <>
-      <ExternalPage />
-        <h1>Sobre</h1>
+        <ExternalPage />
+        <h1>Cadastro</h1>
     </>
   );
 };
 
-export default About;
+export default Signup;
