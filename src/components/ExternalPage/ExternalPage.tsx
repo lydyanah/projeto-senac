@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/global.css";
+import "./styles.css";
 
 type Props = {
   children?: ReactNode
@@ -9,19 +9,19 @@ type Props = {
 const ExternalPage: FunctionComponent<Props> = ({children}) => {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/sobre">Sobre</Link>
-        <Link to="/contato">Contato</Link>
+      <nav className="menu">
+        <Link to="/"className="menuItem">Home</Link>
+        <Link to="/sobre"className="menuItem">Sobre</Link>
+        <Link to="/contato"className="menuItem">Contato</Link>
         <Link to="/login">
-          <button>Entrar</button>
+          <button className="login">Entrar</button>
         </Link>
       </nav>
       <main>
         {children}
       </main>
       <footer>
-        <h3>Footer</h3>
+       <p>2021. Meu Estilo Online. Todos os direitos reservados.</p>
       </footer>
     </>
   );
