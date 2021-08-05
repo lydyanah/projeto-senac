@@ -3,12 +3,11 @@ import ExternalPage from "../../components/ExternalPage/ExternalPage";
 
 const Home = () => {
   return (
-    <div>
-      <ExternalPage />
+    <ExternalPage>
       <Link to="/cadastro">
         <button>Cadastre-se</button>
       </Link>
-    </div>
+    </ExternalPage>
   );
 };
 

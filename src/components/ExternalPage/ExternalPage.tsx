@@ -1,7 +1,12 @@
+import { FunctionComponent, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/global.css";
 
-const ExternalPage = () => {
+type Props = {
+  children?: ReactNode
+}
+
+const ExternalPage: FunctionComponent<Props> = ({children}) => {
   return (
     <>
       <nav>
@@ -13,7 +18,7 @@ const ExternalPage = () => {
         </Link>
       </nav>
       <main>
-        <h2>Conteúdo da página</h2>
+        {children}
       </main>
       <footer>
         <h3>Footer</h3>
