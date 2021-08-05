@@ -4,10 +4,10 @@ const Login = () => {
   return (
     <>
       <ExternalPage>
-        <h1>Create Account</h1>
+        <h1>Create Account</h1> {/*Essa é a página de Login...*/}
         <form action="">
           <div>
-            <label htmlFor="name">Nome:</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
               id="name"
@@ -26,11 +26,11 @@ const Login = () => {
         </div>
         
         <div>
-        <label htmlFor="passoword">Senha</label>
+        <label htmlFor="password">Senha</label>
           <input 
-          type="passoword" 
-          id="passoword" 
-          name="passoword">
+          type="password" 
+          id="password" 
+          name="password">
           </input>  
         </div>
       </ExternalPage>

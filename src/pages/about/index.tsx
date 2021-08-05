@@ -3,7 +3,7 @@ import ExternalPage from "../../components/ExternalPage/ExternalPage";
 const About = () => {
   return (
       <ExternalPage>
-            <h1>olá,mundoo!</h1>
+      <h1>Sobre nós</h1>
       </ExternalPage>
   );
 };
