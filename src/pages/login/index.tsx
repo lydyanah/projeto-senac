@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <>
       <ExternalPage>
-        <h1>Faça seu Login</h1> {/*Essa é a página de Login...*/}
+        <h1>Faça o Login</h1> {/*Essa é a página de Login...*/}
         <form action="">
         <div>
         <label htmlFor="email">E-mail</label>
