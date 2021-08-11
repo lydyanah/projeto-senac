@@ -1,10 +1,10 @@
-import ExternalPage from "../../components/ExternalPage/ExternalPage";
+import Page from "../../components/Page/Page";
 
 const Contact = () => {
   return (
-    <ExternalPage>
+    <Page>
           
-    </ExternalPage>
+    </Page>
 );
 };
 

@@ -1,8 +1,8 @@
-import ExternalPage from "../../components/ExternalPage/ExternalPage";
+import Page from "../../components/Page/Page";
 
 const Signup = () => {
   return (
-    <ExternalPage>
+    <Page>
           <h1>Crie uma Conta</h1> 
         <form action="">
         <div>
@@ -30,7 +30,7 @@ const Signup = () => {
           name="password">
           </input>  
         </div>
-    </ExternalPage>
+    </Page>
 );
 };
 

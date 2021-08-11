@@ -1,8 +1,8 @@
-import ExternalPage from "../../components/ExternalPage/ExternalPage";
+import Page from "../../components/Page/Page";
 
 const About = () => {
   return (
-    <ExternalPage>
+    <Page>
       <div>
         <h1>Sobre</h1>
         <p>
@@ -20,7 +20,7 @@ const About = () => {
         <h3>Arthur Mendes</h3>
         <p>gitHub</p>
       </div>
-    </ExternalPage>
+    </Page>
   );
 };
 

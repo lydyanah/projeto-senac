@@ -7,7 +7,7 @@ type Props = {
   children?: ReactNode;
 };
 
-const ExternalPage: FunctionComponent<Props> = ({ children }) => {
+const MemberPage: FunctionComponent<Props> = ({ children }) => {
   return (
     <>
       <nav>
@@ -33,4 +33,4 @@ const ExternalPage: FunctionComponent<Props> = ({ children }) => {
   );
 };
 
-export default ExternalPage;
+export default MemberPage;

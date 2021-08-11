@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import ExternalPage from "../../components/ExternalPage/ExternalPage";
+import Page from "../../components/Page/Page";
 import "./styles.css";
 
 
 const Home = () => {
   return (
-    <ExternalPage>
+    <Page>
       <div className="infoGeral">
         <h1>Organize, crie, planeje!</h1>
         <p>
@@ -37,7 +37,7 @@ const Home = () => {
         <h2>Malas</h2>
         <p>Planeje o que levar em suas viagens</p>
       </div>
-    </ExternalPage>
+    </Page>
   );
 };
 

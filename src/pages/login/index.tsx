@@ -1,9 +1,9 @@
-import ExternalPage from "../../components/ExternalPage/ExternalPage";
+import Page from "../../components/Page/Page";
 
 const Login = () => {
   return (
     <>
-      <ExternalPage>
+      <Page>
         <h1>Faça seu Login</h1> 
         <form action="">
         <div>
@@ -23,7 +23,7 @@ const Login = () => {
           name="password">
           </input>  
         </div>
-      </ExternalPage>
+      </Page>
     </>
 
     );
