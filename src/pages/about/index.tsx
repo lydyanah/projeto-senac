@@ -1,6 +1,7 @@
 import Page from "../../components/Page/Page";
 import GitHubButton from "react-github-btn";
 import lydyanah from "../../assets/images/lydyanah.jpg";
+import mendesarthur from "../../assets/images/mendesarthur.jpg";
 import "./styles.css";
 
 const About = () => {
@@ -19,23 +20,36 @@ const About = () => {
 
         <div className="infoDevs">
           <h2>Desenvolvedores</h2>
-          <ul className="devs">
+          <ul className="devs-lista">
             <li>
-              <h3>Lidiana Tedeschi</h3>
-              <img className="lydyanah" src={lydyanah} alt="lydyanah" />
-              <span className="GitHubButton">
-                <GitHubButton
-                  href="https://github.com/lydyanah"
-                  data-color-scheme="no-preference: dark; light: dark; dark: dark;"
-                  data-size="large"
-                  aria-label="Siga @lydyanah no GitHub"
-                >Seguir @lydyanah
-                </GitHubButton>
-              </span>
+              <img className="fotoPerfil" src={lydyanah} alt="lydyanah" />
+              <div className="devInfo">
+                <h3>Lidiana Tedeschi</h3>
+                <span className="GitHubButton">
+                  <GitHubButton
+                    href="https://github.com/lydyanah"
+                    data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                    data-size="large"
+                    aria-label="Siga @lydyanah no GitHub"
+                  > Seguir @lydyanah
+                  </GitHubButton>
+                </span>
+              </div>
             </li>
             <li>
-              <h3>Arthur Mendes</h3>
-              <p>gitHub</p>
+              <img className="fotoPerfil" src={mendesarthur} alt="mendesarthur" />
+              <div className="devInfo">
+                <h3>Arthur Mendes</h3>
+                <span className="GitHubButton">
+                  <GitHubButton
+                    href="https://github.com/mendesarthur"
+                    data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                    data-size="large"
+                    aria-label="Siga @mendesarthur no GitHub"
+                  > Seguir @mendesarthur
+                  </GitHubButton>
+                </span>
+              </div>
             </li>
           </ul>
         </div>

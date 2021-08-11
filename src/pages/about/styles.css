@@ -1,4 +1,3 @@
-.conteúdoSobre h3,
 .conteúdoSobre p{
     font-size: 20px;
     text-align: justify;
@@ -13,7 +12,6 @@
 .infoSobre{
     padding: 50px 0px;
     height: 100px;
-
 }
 
 .infoDevs{
@@ -21,10 +19,22 @@
     height: 300px;
 }
 
-.GitHubButton{
+.devs-lista li{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 300px;
     padding: 20px;
 }
 
-.lydyanah{
+.devInfo h3,
+.GitHubButton{
+    font-size: 20px;
+    padding: 10px;
+   
+}
+.fotoPerfil{
     height: 80px;
+    width: 80px;
+    border-radius: 50%;
 }
