@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import ExternalPage from "../../components/ExternalPage/ExternalPage";
+import "./styles.css";
+
 
 const Home = () => {
   return (
     <ExternalPage>
-      <div>
+      <div className="infoGeral">
         <h1>Organize, crie, planeje!</h1>
         <p>
           Adicione suas roupas e crie looks, planeje o que vestir e tenha acesso
@@ -15,7 +17,7 @@ const Home = () => {
         </Link>
       </div>
 
-      <div>
+      <div className="públicoAlvo">
         <h1>A plataforma é perfeita para:</h1>
         <h2>Pessoas Ocupadas</h2>
         <p>Planeje o que vestir rapidamente e em qualquer lugar</p>
@@ -24,7 +26,7 @@ const Home = () => {
         <h2>Fashionistas e Profissionais da moda</h2>
         <p>Crie novos looks, estilos e roupas, melhore o seu estilo</p>
       </div>
-      <div>
+      <div className="recursos">
         <h1>Recursos</h1>
         <h2>Closet</h2>
         <p>Cadastre suas roupas, sapatos e acessórios e veja tudo o que você tem facilmente</p>

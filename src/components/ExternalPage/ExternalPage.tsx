@@ -1,5 +1,6 @@
 import { FunctionComponent, ReactNode } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/images/logo.png"
 import "./styles.css";
 
 type Props = {
@@ -11,7 +12,7 @@ const ExternalPage: FunctionComponent<Props> = ({ children }) => {
     <>
       <nav>
         <span>
-          <h1 className="logo">Meu Estilo Online</h1>
+          <img className="logo" src={Logo} alt="logotipo" />
         </span>
         <span className="menu">
           <Link to="/" className="menuItem">Home</Link>

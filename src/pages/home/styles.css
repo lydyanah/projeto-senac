@@ -1,0 +1,25 @@
+.infoGeral{
+    background-color: blueviolet;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.infoGeral p{
+    text-align: center;
+}
+
+.públicoAlvo{
+    background-color: brown;
+}
+
+.recursos{
+    background-color: yellow;
+}
+
+footer{
+    background-color: teal;
+}
