@@ -11,11 +11,11 @@ const Page: FunctionComponent<Props> = ({ children }) => {
   return (
     <>
       <body>
-        <nav>
-          <span>
+        <div className="navbar">
+          <Link to="/">
             <img className="logo" src={Logo} alt="logotipo" />
-          </span>
-          <span className="menu">
+          </Link>
+          <nav className="menu">
             <Link to="/" className="menuItem">
               Home
             </Link>
@@ -25,11 +25,11 @@ const Page: FunctionComponent<Props> = ({ children }) => {
             <Link to="/contato" className="menuItem">
               Contato
             </Link>
-          </span>
+          </nav>
           <Link to="/login">
             <button className="login">Entrar</button>
           </Link>
-        </nav>
+        </div>
         <main>
           {children}
         </main>

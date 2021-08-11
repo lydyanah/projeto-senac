@@ -2,8 +2,8 @@
   height: 50px;
 }
 
-nav{
-  background-color: rgb(215, 239, 250);
+.navbar{
+  background-color: rgb(234, 239, 250);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,10 @@ button.login{
 }
 
 footer{
-  text-align: center;
+  background-color: rgb(234, 239, 250);
   height: 50px;
-  margin-top: auto;
+  margin-top: auto;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
