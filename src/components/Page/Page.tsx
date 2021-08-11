@@ -10,7 +10,7 @@ type Props = {
 const Page: FunctionComponent<Props> = ({ children }) => {
   return (
     <>
-      <body>
+      <div className="content">
         <div className="navbar">
           <Link to="/">
             <img className="logo" src={Logo} alt="logotipo" />
@@ -36,7 +36,7 @@ const Page: FunctionComponent<Props> = ({ children }) => {
         <footer>
           <p>2021. Meu Estilo Online. Todos os direitos reservados.</p>
         </footer>
-      </body>
+      </div>
     </>
   );
 };

@@ -4,7 +4,7 @@ const About = () => {
   return (
     <Page>
       <div>
-        <h1>Sobre</h1>
+        <h2>Sobre</h2>
         <p>
           A proposta do Meu Estilo Online é ser uma alternativa aos aplicativos
           de virtualização de guarda-roupas já existentes, oferecendo uma

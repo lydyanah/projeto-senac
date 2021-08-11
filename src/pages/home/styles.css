@@ -1,9 +1,24 @@
+.conteúdoHome h2{
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteúdoHome h3, p{
+    font-size: 20px;
+}
+
 .infoGeral{
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.infoGeral h1{
+    font-size: 3em;
+    margin: 20px;
 }
 
 button.cadastro,
@@ -13,17 +28,30 @@ button.cadastro,
     margin: 20px;
 }
 
-.infoGeral h1{
-    font-size: 3em;
-    margin: 20px;
-}
-
 .públicoAlvo{
     height: 300px;
 }
 
+.públicoAlvo-lista{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.públicoAlvo-item{
+    padding: 20px;
+}
+
 .recursos{
     height: 300px;
+}
+
+.recursos-lista{
+    display: flex;
+}
+
+.recursos-item{
+    padding: 20px;
 }
 
 
