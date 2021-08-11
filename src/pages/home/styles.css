@@ -1,25 +1,29 @@
 .infoGeral{
-    background-color: blueviolet;
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px;
 }
 
-.infoGeral p{
+.infoGeral p, button{
+    font-size: 1.5em;
     text-align: center;
+    margin: 20px;
+}
+
+.infoGeral h1{
+    font-size: 3em;
+    margin: 20px;
 }
 
 .públicoAlvo{
-    background-color: brown;
+    height: 300px;
 }
 
 .recursos{
-    background-color: yellow;
+    height: 300px;
 }
 
-footer{
-    background-color: teal;
-}
+
+

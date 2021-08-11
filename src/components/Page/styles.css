@@ -1,12 +1,13 @@
 .logo{
-  height: 80px;
+  height: 60px;
 }
 
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  height: 80px;
+  margin: 0 80px;
 }
 
 .menuItem {
@@ -15,4 +16,11 @@ nav{
 
 .login{
     font-size: 1.2em;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
