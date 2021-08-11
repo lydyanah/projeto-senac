@@ -13,7 +13,7 @@ const Home = () => {
           ao seu guarda-roupa em qualquer lugar que você estiver!
         </p>
         <Link to="/cadastro">
-          <button>Cadastre-se</button>
+          <button className="cadastro">Cadastre-se</button>
         </Link>
       </div>
 
