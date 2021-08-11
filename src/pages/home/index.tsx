@@ -5,7 +5,7 @@ import "./styles.css";
 const Home = () => {
   return (
     <Page>
-      <main className="conteúdoHome">
+      <div className="conteúdoHome">
         <div className="infoGeral">
           <h1>Organize, crie, planeje!</h1>
           <p>
@@ -59,7 +59,7 @@ const Home = () => {
             </li>
           </ul>
         </div>
-      </main>
+      </div>
     </Page>
   );
 };

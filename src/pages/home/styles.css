@@ -4,7 +4,8 @@
     padding: 20px;
 }
 
-.conteúdoHome h3, p{
+.conteúdoHome h3, 
+.conteúdoHome p{
     font-size: 20px;
 }
 
@@ -29,6 +30,7 @@ button.cadastro,
 }
 
 .públicoAlvo{
+    padding: 100px 0px;
     height: 300px;
 }
 
@@ -43,6 +45,7 @@ button.cadastro,
 }
 
 .recursos{
+    padding: 100px 0px;
     height: 300px;
 }
 

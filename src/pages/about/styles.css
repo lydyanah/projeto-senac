@@ -1,0 +1,23 @@
+.conteúdoSobre h3,
+.conteúdoSobre p{
+    font-size: 20px;
+    text-align: justify;
+    padding: 20px;
+}
+
+.conteúdoSobre h2{
+    font-size: 2em;
+    padding: 20px;
+}
+
+.infoSobre{
+    padding: 50px 0px;
+    height: 100px;
+
+}
+
+.infoDevs{
+    padding: 50px 0px;
+    height: 300px;
+}
+
