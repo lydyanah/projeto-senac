@@ -7,14 +7,10 @@
     font-weight: 300;
 }
 
-.content {
+#root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-main{
-    margin: 0px 200px;
 }
 
 h1, h2, h3{

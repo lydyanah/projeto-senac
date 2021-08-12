@@ -1,26 +1,30 @@
-.logo{
+.logotipo{
   height: 50px;
+  padding: 10px;
 }
 
-.navbar{
+.navbar-fixed{
   background-color: rgb(234, 239, 250);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  padding: 0 80px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.menuItem {
-  padding: 8px;
+.navbar-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-button.login{
-    font-size: 1.2em;
+.menuItem {
+  padding: 10px;
 }
+/* 
+button.login{
+  position: absolute;
+  right: 40px;
+  font-size: 16px;
+} */
 
 footer{
   background-color: rgb(234, 239, 250);
@@ -29,4 +33,10 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+
+@media (min-width: 440px){
+ 
 }
