@@ -1,4 +1,4 @@
-.conteúdoHome h2{
+ .conteúdoHome h2{
     font-size: 2em;
     text-align: center;
     padding: 40px;
@@ -39,7 +39,7 @@ button.cadastro,
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: flex-start;
+    align-content: center;
 }
 
 .públicoAlvo-item::before{
