@@ -1,12 +1,13 @@
 .conteúdoHome h2{
     font-size: 2em;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
 }
 
 .conteúdoHome h3, 
 .conteúdoHome p{
-    font-size: 20px;
+    font-size: 22px;
+    padding: 5px 0px;
 }
 
 .infoGeral{
@@ -36,12 +37,24 @@ button.cadastro,
 
 .públicoAlvo-lista{
     display: flex;
-    align-items: center; 
+    flex-wrap: wrap;
     flex-direction: column;
+    align-content: flex-start;
 }
 
+.públicoAlvo-item::before{
+    content: url(../../assets/icons/check-mark.png);
+    padding: 0px 20px;
+}
+
+
 .públicoAlvo-item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
+    height: 80px;
 }
 
 .recursos{
