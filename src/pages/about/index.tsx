@@ -7,8 +7,8 @@ import "./styles.css";
 const About = () => {
   return (
     <Page>
-      <div className="conteúdoSobre">
-        <div className="infoSobre">
+      <section className="conteúdoSobre">
+        <section className="infoSobre">
           <h2>Sobre</h2>
           <p>
             A proposta do Meu Estilo Online é ser uma alternativa aos
@@ -16,9 +16,9 @@ const About = () => {
             oferecendo uma plataforma totalmente em português, fácil de utilizar
             e personalizável.
           </p>
-        </div>
+        </section>
 
-        <div className="infoDevs">
+        <section className="infoDevs">
           <h2>Desenvolvedores</h2>
           <ul className="devs-lista">
             <li>
@@ -52,8 +52,8 @@ const About = () => {
               </div>
             </li>
           </ul>
-        </div>
-      </div>
+        </section>
+      </section>
     </Page>
   );
 };

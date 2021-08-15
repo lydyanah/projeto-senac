@@ -1,4 +1,14 @@
-.conteúdoSobre p{
+.infoSobre{
+    padding: 150px 20px 40px;
+    height: 100px;
+}
+
+.infoDevs{
+    padding: 50px 0px;
+    height: 300px;
+}
+
+/* .conteúdoSobre p{
     font-size: 20px;
     text-align: justify;
     padding: 20px;
@@ -9,10 +19,6 @@
     padding: 20px;
 }
 
-.infoSobre{
-    padding: 150px 0px;
-    height: 100px;
-}
 
 .infoDevs{
     padding: 50px 0px;
@@ -25,7 +31,7 @@
     justify-content: flex-start;
     width: 300px;
     padding: 20px;
-}
+} */
 
 .devInfo h3,
 .GitHubButton{
