@@ -1,74 +1,91 @@
- .conteúdoHome h2{
-    font-size: 2em;
-    text-align: center;
-    padding: 40px;
+section.conteúdoHome h2 {
+  font-size: 22px;
+  text-align: center;
 }
 
-.conteúdoHome h3, 
-.conteúdoHome p{
-    font-size: 22px;
-    padding: 5px 0px;
+section.infoGeral {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.infoGeral{
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+section.infoGeral h1 {
+  font-size: 2em;
 }
 
-.infoGeral h1{
+section.infoGeral p,
+button.cadastro {
+  font-size: 20px;
+  text-align: center;
+}
+
+section.públicoAlvo {
+  min-height: 300px;
+}
+
+li.públicoAlvo-item::before {
+  content: url(../../assets/icons/check-mark.png);
+  padding: 5px;
+}
+
+section.recursos {
+  min-height: 300px;
+}
+
+ul.recursos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+li.recursos-item {
+  padding: 20px;
+}
+
+@media (min-width: 440px) {
+  section.infoGeral h1 {
     font-size: 3em;
-    margin: 20px;
-}
+  }
 
-button.cadastro,
-.infoGeral p{
+  section.infoGeral p,
+  button.cadastro {
     font-size: 1.5em;
     text-align: center;
-    margin: 20px;
+  }
+
+  section.conteúdoHome h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  section.conteúdoHome h3,
+  section.conteúdoHome p {
+    font-size: 22px;
+  }
 }
 
-.públicoAlvo{
-    padding: 100px 0px;
-    height: 300px;
-}
-
-.públicoAlvo-lista{
+@media (min-width: 768px) {
+  ul.públicoAlvo-lista {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-}
+  }
 
-.públicoAlvo-item::before{
-    content: url(../../assets/icons/check-mark.png);
+  li.públicoAlvo-item::before {
     padding: 0px 20px;
-}
+  }
 
-
-.públicoAlvo-item{
+  li.públicoAlvo-item {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    height: 80px;
+    height: 60px;
+  }
 }
-
-.recursos{
-    padding: 100px 0px;
-    height: 300px;
-}
-
-.recursos-lista{
-    display: flex;
-}
-
-.recursos-item{
-    padding: 20px;
-} 
-
-
-

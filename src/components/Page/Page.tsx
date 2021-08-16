@@ -33,7 +33,9 @@ const Page: FunctionComponent<Props> = ({ children }) => {
           </div>
         </div>
       </div>
-      <main>{children}</main>
+      <main>
+        {children}
+      </main>
       <footer>
         <p>2021. Meu Estilo Online. Todos os direitos reservados.</p>
       </footer>

@@ -5,8 +5,8 @@ import "./styles.css";
 const Home = () => {
   return (
     <Page>
-      <div className="conteúdoHome">
-        <div className="infoGeral">
+      <section className="conteúdoHome">
+        <section className="infoGeral">
           <h1>Organize, crie, planeje!</h1>
           <p>
             Adicione suas roupas e crie looks, planeje o que vestir e tenha
@@ -15,9 +15,9 @@ const Home = () => {
           <Link to="/cadastro">
             <button className="cadastro">Cadastre-se</button>
           </Link>
-        </div>
+        </section>
 
-        <div className="públicoAlvo">
+        <section className="públicoAlvo">
           <h2>A plataforma é perfeita para:</h2>
           <ul className="públicoAlvo-lista">
             <li className="públicoAlvo-item">
@@ -33,9 +33,9 @@ const Home = () => {
               <p>Crie novos looks, estilos e roupas, melhore o seu estilo</p>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div className="recursos">
+        <section className="recursos">
           <h2>Recursos</h2>
           <ul className="recursos-lista">
             <li className="recursos-item">
@@ -58,8 +58,8 @@ const Home = () => {
               <p>Planeje o que levar em suas viagens</p>
             </li>
           </ul>
-        </div>
-      </div>
+        </section>
+      </section>
     </Page>
   );
 };
