@@ -1,11 +1,21 @@
-.infoSobre{
-    padding: 150px 20px 40px;
-    height: 100px;
+section.conteúdoSobre p{
+    font-size: 20px;
+    text-align: justify;
+    padding: 20px;
+}
+
+section.conteúdoSobre h2{
+    font-size: 22px;
+    padding: 0px 20px;
+}
+
+section.infoSobre{
+    min-height: 200px;
 }
 
 .infoDevs{
     padding: 50px 0px;
-    height: 300px;
+    min-height: 400px;
 }
 
 /* .conteúdoSobre p{
@@ -43,4 +53,10 @@
     height: 80px;
     width: 80px;
     border-radius: 50%;
+}
+
+@media screen and (min-width: 440px) {
+    section.conteúdoSobre h2{
+        font-size: 2em;
+    }
 }
