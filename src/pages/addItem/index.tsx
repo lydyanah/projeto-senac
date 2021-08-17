@@ -3,7 +3,7 @@ import MemberPage from "../../components/MemberPage/MemberPage";
 const AddItem = () => {
   return (
     <MemberPage>
-          <h1>Hello</h1>
+          <h1>Aqui é a página de cadastro do item</h1>
     </MemberPage>
 );
 };

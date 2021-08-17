@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/cadastro" component={Signup} />
         <Route path="/closet" component={Closet} />
-        <Route path="/cadastrar-item" component={AddItem} />
+        <Route path="/adicionar-item" component={AddItem} />
       </Switch>
     </BrowserRouter>
   
