@@ -4,7 +4,7 @@ section.conteúdoHome h2 {
 }
 
 section.infoGeral {
-  min-height: 600px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,8 +21,7 @@ section.públicoAlvo {
 }
 
 ul.públicoAlvo-lista {
-  padding-top: 40px;
-  padding-bottom: 20px;
+  margin-top: 40px;
 }
 
 li.públicoAlvo-item::before {

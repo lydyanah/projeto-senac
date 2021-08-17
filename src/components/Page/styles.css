@@ -32,6 +32,12 @@ footer{
   width: 100%;
 }
 
+@media (max-width: 440px){
+  .navbar-content{
+    flex-direction: column;
+  }
+}
+
 @media (min-width: 440px){
   .navbar-content{
     justify-content: space-around;
