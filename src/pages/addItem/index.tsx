@@ -1,4 +1,4 @@
-import MemberPage from "../../components/MemberPage/MemberPage";
+import MemberPage from "../../components/memberPage/memberPage";
 
 const AddItem = () => {
   return (

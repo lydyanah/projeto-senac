@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import MemberPage from "../../components/MemberPage/MemberPage";
+import MemberPage from "../../components/memberPage/memberPage";
 
 const Closet = () => {
   return (

@@ -1,6 +1,7 @@
 import { FunctionComponent, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
+import "../Page/styles.css";
 import "./styles.css";
 
 type Props = {
@@ -12,22 +13,19 @@ const MemberPage: FunctionComponent<Props> = ({ children }) => {
     <>
       <div className="navbar-fixed">
         <div className="navbar-content">
-          <Link to="/">
+          <Link to="/closet">
             <img className="logotipo" src={Logo} alt="logotipo" />
           </Link>
           <div className="menu">
             <nav className="menu">
+              <Link to="/closet" className="menuItem">
+               Perfil
+              </Link>
+              <Link to="/closet" className="menuItem">
+                Configurações
+              </Link>
               <Link to="/" className="menuItem">
-                Home
-              </Link>
-              <Link to="/sobre" className="menuItem">
-                Sobre
-              </Link>
-              <Link to="/contato" className="menuItem">
-                Contato
-              </Link>
-              <Link to="/login">
-                <button className="login">Entrar</button>
+                Sair
               </Link>
             </nav>
           </div>
