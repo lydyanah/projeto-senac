@@ -22,11 +22,10 @@ const Login = () => {
           type="password" 
           id="password" 
           name="password">
-          </input>  
+          </input>
+        <Link to="/closet" className="button"> Entrar</Link>
         </div>
-        <Link to="/closet">
-            <button className="login">Entrar</button>
-          </Link>
+
       </Page>
     </>
 

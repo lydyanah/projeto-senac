@@ -16,13 +16,13 @@ section.infoGeral h1 {
   font-size: 2em;
 }
 
-button.cadastro{
-  text-align: center;
-  margin: 20px 0px;
-}
-
 section.públicoAlvo {
   min-height: 400px;
+}
+
+ul.públicoAlvo-lista {
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 li.públicoAlvo-item::before {
@@ -54,7 +54,7 @@ li.recursos-item {
   padding: 20px;
 }
 
-@media screen and (min-width: 440px) {
+@media (min-width: 768px) {
   section.infoGeral h1 {
     font-size: 3em;
   }
@@ -74,9 +74,11 @@ li.recursos-item {
   section.conteúdoHome p {
     font-size: 22px;
   }
-}
 
-@media (min-width: 768px) {
+  section.infoGeral .button{
+    font-size: 22px;
+  }
+
   ul.públicoAlvo-lista {
     display: flex;
     flex-wrap: wrap;

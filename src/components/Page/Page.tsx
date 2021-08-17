@@ -26,9 +26,7 @@ const Page: FunctionComponent<Props> = ({ children }) => {
               <Link to="/contato" className="menuItem">
                 Contato
               </Link>
-              <Link to="/login">
-                <button className="login">Entrar</button>
-              </Link>
+              <Link to="/login" className="button"> Entrar</Link>
             </nav>
           </div>
         </div>

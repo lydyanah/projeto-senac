@@ -12,9 +12,7 @@ const Home = () => {
             Adicione suas roupas e crie looks, planeje o que vestir e tenha
             acesso ao seu guarda-roupa em qualquer lugar que você estiver!
           </p>
-          <Link to="/cadastro">
-            <button className="cadastro">Cadastre-se</button>
-          </Link>
+          <Link to="/cadastro" className="button">Cadastre-se</Link>
         </section>
 
         <section className="públicoAlvo">
