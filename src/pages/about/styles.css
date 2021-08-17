@@ -1,47 +1,44 @@
 section.conteúdoSobre p{
     font-size: 20px;
-    text-align: justify;
-    padding: 20px;
+    text-align: center;
+    padding: 20px 0px;
 }
 
 section.conteúdoSobre h2{
     font-size: 22px;
-    padding: 0px 20px;
+    text-align: center;
 }
 
 section.infoSobre{
     min-height: 200px;
+    padding: 50px 20px;
 }
 
-.infoDevs{
-    padding: 50px 0px;
+section.infoDevs{
+    padding: 50px 20px;
     min-height: 400px;
 }
 
-/* .conteúdoSobre p{
-    font-size: 20px;
-    text-align: justify;
-    padding: 20px;
+ul.devsLista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.conteúdoSobre h2{
-    font-size: 2em;
-    padding: 20px;
-}
-
-
-.infoDevs{
-    padding: 50px 0px;
-    height: 300px;
-}
-
-.devs-lista li{
+li.devsLista-perfil{
 	display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 300px;
+    justify-content: center;
+    align-items:  center;
+    width: 240px;
     padding: 20px;
-} */
+} 
+
+.devInfo{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
 
 .devInfo h3,
 .GitHubButton{
@@ -49,14 +46,39 @@ section.infoSobre{
     padding: 10px;
    
 }
+
 .fotoPerfil{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
 }
 
 @media screen and (min-width: 440px) {
     section.conteúdoSobre h2{
         font-size: 2em;
+        text-align: justify;
+    }
+
+    section.conteúdoSobre p{
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    ul.devsLista{
+        align-items: flex-start;
+    }
+
+    li.devsLista-perfil{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 300px;
+        padding: 20px;
+    } 
+    
+
+    .fotoPerfil{
+        height: 80px;
+        width: 80px;
     }
 }

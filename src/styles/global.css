@@ -20,3 +20,10 @@ main{
 h1, h2, h3{
     font-family: Yeseva One;
 }
+
+@media screen and (min-width: 440px) {
+    main{
+       padding: 0px 60px;  
+    }
+   
+}

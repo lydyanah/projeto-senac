@@ -20,8 +20,8 @@ const About = () => {
 
         <section className="infoDevs">
           <h2>Desenvolvedores</h2>
-          <ul className="devs-lista">
-            <li>
+          <ul className="devsLista">
+            <li className="devsLista-perfil">
               <img className="fotoPerfil" src={lydyanah} alt="lydyanah" />
               <div className="devInfo">
                 <h3>Lidiana Tedeschi</h3>
@@ -36,7 +36,7 @@ const About = () => {
                 </span>
               </div>
             </li>
-            <li>
+            <li className="devsLista-perfil">
               <img className="fotoPerfil" src={mendesarthur} alt="mendesarthur" />
               <div className="devInfo">
                 <h3>Arthur Mendes</h3>
