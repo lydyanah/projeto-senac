@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Page from "../../components/Page/Page";
 
 const Login = () => {
@@ -23,6 +24,9 @@ const Login = () => {
           name="password">
           </input>  
         </div>
+        <Link to="/closet">
+            <button className="login">Entrar</button>
+          </Link>
       </Page>
     </>
 
