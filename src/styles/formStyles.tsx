@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles} from '@material-ui/core';
 import './global.css';
 
   
@@ -17,12 +17,14 @@ const formStyles = makeStyles(theme => ({
     },
     
     field: {
-      marginTop: theme.spacing(2),
+        marginTop: theme.spacing(2),
     },
 
     submitButton: {
         marginTop: theme.spacing(2),
-      },
+    },
 }));
 
+
+  
 export default formStyles;
