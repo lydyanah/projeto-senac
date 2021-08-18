@@ -1,4 +1,4 @@
-import { makeStyles} from '@material-ui/core';
+import { capitalize, makeStyles} from '@material-ui/core';
 import './global.css';
 
   
@@ -23,8 +23,14 @@ const formStyles = makeStyles(theme => ({
     submitButton: {
         marginTop: theme.spacing(2),
     },
-}));
 
+    label: {
+        fontSize: 20,
+        textTransform: 'capitalize',
+        fontWeight: 700,
+    },       
+    
+}));
 
   
 export default formStyles;

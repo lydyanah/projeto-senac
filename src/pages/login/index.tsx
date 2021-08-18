@@ -29,7 +29,9 @@ const Login = () => {
                 }, 500);
               }}
               validationSchema={Yup.object().shape({
-                email: Yup.string().required("Campo obrigatório"),
+                email: Yup.string()
+                  .required("Campo obrigatório")
+                  .email("Formato inválido"),
                 password: Yup.string().required("Campo obrigatório"),
               })}
             >
@@ -59,7 +61,10 @@ const Login = () => {
                     type="checkbox"
                   />
                   <Button
-                    className={classes.submitButton}
+                    classes={{
+                      root: classes.submitButton,
+                      label: classes.label,
+                    }}
                     color="primary"
                     disabled={isSubmitting}
                     disableElevation
