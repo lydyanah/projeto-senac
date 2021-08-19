@@ -5,7 +5,7 @@ const VisualizarItem = () => {
   return (
     <MemberPage>
       <section className="conteúdoCloset">
-      <h1>Isso é um teste</h1>
+      <h1>Essa é a página de visualização do item do closet</h1>
       </section>
     </MemberPage>
   );
