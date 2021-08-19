@@ -9,11 +9,11 @@ const theme = createTheme({
     },
 
     h1: {
-      fontFamily: "Yeseva One",
       fontSize: 22,
       "@media screen and (min-width: 440px)": {
-        fontSize: 32,
-      },     
+        fontSize: 30,
+      },
+      fontWeight: 700,
     },
   },
   

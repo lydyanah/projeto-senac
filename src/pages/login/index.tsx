@@ -32,9 +32,15 @@ const Login = () => {
               }}
               validationSchema={Yup.object().shape({
                 email: Yup.string()
-                  .required("Campo obrigatório")
+                  .required("Digite seu e-mail")
                   .email("Formato inválido"),
-                password: Yup.string().required("Campo obrigatório"),
+                password: Yup.string()
+                  .required("Digite sua senha")
+                  .min(8, "Este campo é pequeno demais. Ele deveria ter 8 caracteres.")
+                  .matches(
+                    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]$/,
+                    "Sua senha não obedece a todos os requisitos (letra maiúscula e minúscula, número e símbolo)."
+                  ),
               })}
               
             >
