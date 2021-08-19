@@ -1,7 +1,6 @@
 import { Field, Form, Formik } from "formik";
-import { CheckboxWithLabel, TextField } from "formik-material-ui";
-import { Button, ThemeProvider, Typography, IconButton, InputAdornment } from "@material-ui/core";
-import {Visibility, VisibilityOff} from '@material-ui/icons';
+import { TextField } from "formik-material-ui";
+import { Button, ThemeProvider, Typography,} from "@material-ui/core";
 import * as Yup from "yup";
 import Page from "../../components/Page/Page";
 import formStyles from "../../styles/formStyles";
