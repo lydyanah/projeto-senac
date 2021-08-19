@@ -7,10 +7,7 @@ const VisualizarItem = () => {
   return (
     <MemberPage>
       <section className="conteúdoCloset">
-      <h1>Aqui vai aparecer todos os itens</h1>
-      <Link to="/adicionar-item" className="button">
-        Adicionar Item
-        </Link>
+      <h1>Isso é um teste</h1>
       </section>
     </MemberPage>
   );
