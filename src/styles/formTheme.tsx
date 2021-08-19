@@ -8,7 +8,7 @@ const theme = createTheme({
       fontSize: 20,
     },
 
-    h2: {
+    h1: {
       fontFamily: "Yeseva One",
       fontSize: 22,
       "@media screen and (min-width: 440px)": {

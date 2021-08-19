@@ -16,6 +16,14 @@ const formStyles = makeStyles(theme => ({
         width: '30rem',
     },
     
+    title: {
+        fontSize: 22,
+        "@media screen and (min-width: 440px)": {
+          fontSize: 30,
+        }, 
+        textAlign: 'center',
+    },
+
     field: {
         marginTop: theme.spacing(2),
     },

@@ -1,5 +1,3 @@
-
-import { Link } from "react-router-dom";
 import MemberPage from "../../components/memberPage/memberPage";
 import "./styles.css";
 

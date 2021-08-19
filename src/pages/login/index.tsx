@@ -1,6 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import { CheckboxWithLabel, TextField } from "formik-material-ui";
-import { Button, ThemeProvider, Typography } from "@material-ui/core";
+import { Button, ThemeProvider, Typography, IconButton, InputAdornment } from "@material-ui/core";
+import {Visibility, VisibilityOff} from '@material-ui/icons';
 import * as Yup from "yup";
 import Page from "../../components/Page/Page";
 import formStyles from "../../styles/formStyles";
@@ -10,6 +11,7 @@ const initialValues = {
   email: "",
   password: "",
   rememberMe: false,
+  showPassword: false,
 };
 
 const Login = () => {
@@ -34,10 +36,14 @@ const Login = () => {
                   .email("Formato inválido"),
                 password: Yup.string().required("Campo obrigatório"),
               })}
+              
             >
               {({ submitForm, isSubmitting }) => (
                 <Form className={classes.form}>
-                  <Typography variant="h2">Entrar</Typography>
+                  <Typography
+                    variant="h1">
+                    Entrar
+                  </Typography>
                   <Field
                     className={classes.field}
                     component={TextField}
@@ -53,6 +59,20 @@ const Login = () => {
                     name="password"
                     type="password"
                     variant="outlined"
+                    InputProps={{
+                      endAdornment:(
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="toggle password visibility"
+                            edge="end"
+                          >
+                            <Visibility />
+
+                            <VisibilityOff />
+                          </IconButton>
+                        </InputAdornment>
+                      )
+                  }}
                   />
                   <Field
                     component={CheckboxWithLabel}
