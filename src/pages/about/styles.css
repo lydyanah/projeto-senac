@@ -49,8 +49,8 @@ li.devsLista-perfil{
 }
 
 .fotoPerfil{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     padding: 10px;
 }
@@ -80,10 +80,5 @@ li.devsLista-perfil{
 
     .devInfo h3{
         font-size: 22px;
-    }
-    
-    .fotoPerfil{
-        height: 80px;
-        width: 80px;
     }
 }

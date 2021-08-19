@@ -31,7 +31,7 @@ const Signup = () => {
               }}
               validationSchema={Yup.object().shape({
                 email: Yup.string()
-                  .required("Campo obrigatório")
+                  .required("Digite um e-mail válido")
                   .email("Formato inválido"),
                 password: Yup.string()
                 .required("Digite uma senha")
@@ -58,6 +58,7 @@ const Signup = () => {
                     className={classes.field}
                     component={TextField}
                     label="E-mail"
+                    required id="standard-required"
                     name="email"
                     type="email"
                     variant="outlined"
@@ -66,6 +67,7 @@ const Signup = () => {
                     className={classes.field}
                     component={TextField}
                     label="Senha"
+                    required id="standard-required"
                     name="password"
                     type="password"
                     variant="outlined"

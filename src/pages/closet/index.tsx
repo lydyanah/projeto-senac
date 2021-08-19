@@ -6,11 +6,11 @@ import "./styles.css";
 const Closet = () => {
   return (
     <MemberPage>
-      <SubMenu/>
+      <SubMenu />
       <section className="conteúdoCloset">
-      <h1>Aqui vai aparecer todos os itens</h1>
-      <Link to="/adicionar-item" className="button">
-        Adicionar Item
+        <h1>Aqui vai aparecer todos os itens</h1>
+        <Link to="/adicionar-item" className="button">
+          Adicionar Item
         </Link>
       </section>
     </MemberPage>

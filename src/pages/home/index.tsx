@@ -9,8 +9,8 @@ const Home = () => {
         <section className="infoGeral">
           <h1>Organize, crie, planeje!</h1>
           <p>
-            Adicione suas roupas e crie looks, planeje o que vestir e tenha
-            acesso ao seu guarda-roupa em qualquer lugar que você estiver!
+            Adicione suas roupas e crie combinações, planeje o que vestir e tenha
+            acesso ao seu guarda-roupa em qualquer lugar em que você estiver!
           </p>
           <Link to="/cadastro" className="button">Cadastre-se</Link>
         </section>
