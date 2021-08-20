@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import MemberPage from "../../components/memberPage/memberPage";
 import Item from "../../models/item";
 import itensService from "../../services/itens";

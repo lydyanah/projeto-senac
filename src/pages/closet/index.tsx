@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MemberPage from "../../components/memberPage/memberPage";
 import SubMenu from "../../components/SubMenu";
 import Item from "../../models/item";
 import itensService from "../../services/itens";
 import "./styles.css";
 
-type Params = {
-  id: string;
-};
 
 const Closet = () => {
-  const { id } = useParams<Params>();
+ 
   const [itens, setItens] = useState<Item[]>([]);
 
   useEffect(() => {
