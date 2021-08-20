@@ -55,19 +55,19 @@ const Signup = () => {
                     Cadastre-se gratuitamente
                   </Typography>
                   <Field
+                    required
                     className={classes.field}
                     component={TextField}
                     label="E-mail"
-                    required id="standard-required"
                     name="email"
                     type="email"
                     variant="outlined"
                   />
                   <Field
+                    required
                     className={classes.field}
                     component={TextField}
                     label="Senha"
-                    required id="standard-required"
                     name="password"
                     type="password"
                     variant="outlined"

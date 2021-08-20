@@ -45,31 +45,31 @@ const Contact = () => {
                     Envie suas dúvidas e sugestões pra gente!
                   </Typography>
                   <Field
+                    required
                     className= {classes.field}
                     component={TextField}
                     label="Nome"
-                    required id="standard-required"
                     name="nome"
-                    type="nome"
+                    type="text"
                     variant="outlined"
                   />
                   <Field
+                    required
                     className={classes.field}
                     component={TextField}
                     label="E-mail"
-                    required id="standard-required"
                     name="email"
                     type="email"
                     variant="outlined"
                   />
                   <Field
+                    required
                     className={classes.field}
                     component={TextField}
                     label="Mensagem"
-                    required id="standard-required"
                     name="mensagem"
-                    type="mensagem"
-                    multiline
+                    type="text"
+                    multiline="true"
                     rows={4}
                     variant="filled"
                   />               

@@ -6,7 +6,7 @@ import Login from './pages/login';
 import Signup from './pages/signup';
 import Closet from './pages/closet';
 import AddItem from './pages/addItem';
-import VisualizarItem from './pages/closet/itemCloset';
+import VisualizarItem from './pages/closet/visualizarItem';
 
 const App = () => {
   return (
