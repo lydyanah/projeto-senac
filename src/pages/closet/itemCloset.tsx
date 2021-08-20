@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import MemberPage from "../../components/memberPage/memberPage";
 import Item from "../../models/item";
 import itensService from "../../services/itens";
@@ -20,6 +20,7 @@ const VisualizarItem = () => {
   return (
     <MemberPage>
       <section className="conteúdoCloset">
+        
            
 				<h1>{item?.nome}</h1>
 			
