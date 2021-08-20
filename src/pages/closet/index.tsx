@@ -18,11 +18,12 @@ const Closet = () => {
       <SubMenu />
       <section className="conteúdoCloset">
         <h1>Aqui vai aparecer todos os itens</h1>
-        <ul>
+        <ul className="lista-itens">
           {itens.map((item) => {
             return <li key={item.id}>{item.nome}</li>;
           })}
         </ul>
+
         <Link to="/adicionar-item" className="button">
           Adicionar Item
         </Link>

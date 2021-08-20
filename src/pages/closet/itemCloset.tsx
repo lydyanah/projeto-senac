@@ -20,13 +20,11 @@ const VisualizarItem = () => {
   return (
     <MemberPage>
       <section className="conteúdoCloset">
-        <h1>Essa é a página de visualização do item do closet</h1>
-        <header>
+           
 				<h1>{item?.nome}</h1>
-			</header>
-			<main>
+			
 				<p>{item?.descricao}</p>
-			</main>
+	
       </section>
     </MemberPage>
   );
