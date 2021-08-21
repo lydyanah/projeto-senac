@@ -5,6 +5,7 @@ import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import { KeyboardDatePicker } from "formik-material-ui-pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
+import brLocale from "date-fns/locale/pt-BR";
 // import * as Yup from "yup";
 import Page from "../../components/Page/Page";
 // import formStyles from "../../styles/formStyles";
@@ -22,7 +23,7 @@ const AddItem = () => {
         {/* <section className={classes.root}>
           <ThemeProvider theme={theme}> */}
         <section className="adicionarItem">
-          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <MuiPickersUtilsProvider utils={DateFnsUtils} locale={brLocale}>
             <Formik
               initialValues={initialValues}
               onSubmit={(values, { setSubmitting }) => {
