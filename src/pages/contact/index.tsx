@@ -69,7 +69,7 @@ const Contact = () => {
                     label="Mensagem"
                     name="mensagem"
                     type="text"
-                    multiline="true"
+                    multiline= {true}
                     rows={4}
                     variant="filled"
                   />               

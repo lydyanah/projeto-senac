@@ -10,8 +10,3 @@ section.adicionarItem{
     flex-wrap: wrap;
     height: 400px ;
 }
-
-.cadastroItemForm div{
-    margin: 0px 20px;
-    width: 200px;
-}

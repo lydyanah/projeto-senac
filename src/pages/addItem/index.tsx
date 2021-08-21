@@ -49,6 +49,24 @@ const AddItem = () => {
                         hidden
                       />
                     </Button>
+                    <div>
+                    <h2>Categoria</h2>
+                    <Field
+                      name="categoria"
+                      component={Select}
+                      multiple
+                      variant="outlined" 
+                  />
+                    </div>
+                    <div>
+                    <h2>Subcategoria</h2>
+                    <Field
+                      name="subcategoria"
+                      component={Select}
+                      multiple
+                      variant="outlined" 
+                  />
+                  </div>
                   </div>
                   <div>
                     <h2>Cores</h2>
@@ -75,6 +93,24 @@ const AddItem = () => {
                       name="marca"
                       type="text"
                       variant="outlined"
+                  />
+                  </div>
+                  <div>
+                    <h2>Tecido/Material</h2>
+                    <Field
+                      component={TextField}
+                      name="material"
+                      type="text"
+                      variant="outlined"
+                  />
+                  </div>
+                  <div>
+                    <h2>Cuidados</h2>
+                    <Field
+                      name="cuidados"
+                      component={Select}
+                      multiple
+                      variant="outlined" 
                   />
                   </div>
                   <div>
@@ -129,7 +165,7 @@ const AddItem = () => {
                       component={TextField}
                       name="notas"
                       type="text"
-                      multiline="true"
+                      multiline={true}
                       rows={3}
                       variant="outlined"
                     />
