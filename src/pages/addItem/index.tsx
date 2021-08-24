@@ -7,7 +7,7 @@ import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 import brLocale from "date-fns/locale/pt-BR";
 // import * as Yup from "yup";
-import Page from "../../components/Page/Page";
+import MemberPage from "../../components/memberPage/memberPage";
 // import formStyles from "../../styles/formStyles";
 // import theme from "../../styles/formTheme";
 import "./styles.css";
@@ -19,7 +19,7 @@ const AddItem = () => {
 
   return (
     <>
-      <Page>
+      <MemberPage>
         {/* <section className={classes.root}>
           <ThemeProvider theme={theme}> */}
         <section className="adicionarItem">
@@ -202,7 +202,7 @@ const AddItem = () => {
         </section>
         {/* </ThemeProvider>
         </section> */}
-      </Page>
+      </MemberPage>
     </>
   );
 };
