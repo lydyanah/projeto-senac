@@ -16,7 +16,7 @@ const Page: FunctionComponent<Props> = ({ children }) => {
             <img className="logotipo" src={Logo} alt="logotipo" />
           </Link>
           <div className="menu">
-            <nav className="menu">
+            <nav className="menu-itens">
               <Link to="/" className="menuItem">
                 Home
               </Link>
@@ -26,14 +26,19 @@ const Page: FunctionComponent<Props> = ({ children }) => {
               <Link to="/contato" className="menuItem">
                 Contato
               </Link>
-              <Link to="/login" className="button"> Entrar</Link>
             </nav>
+          </div>
+          <div className="member-actions">
+            <Link to="/cadastro" className="menuItem">
+              Cadastre-se
+            </Link>
+            <Link to="/login" className="button">
+              Entrar
+            </Link>
           </div>
         </div>
       </div>
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <footer>
         <p>2021. Meu Estilo Online. Todos os direitos reservados.</p>
       </footer>

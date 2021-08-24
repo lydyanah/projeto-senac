@@ -62,6 +62,14 @@ const Signup = () => {
                     name="email"
                     type="email"
                     variant="outlined"
+                    // InputProps={{
+                    //   classes: ({ input: classes.input }),
+                     
+                    // }}
+                    // InputLabelProps={{
+                    //   classes: ({ root: classes.inputLabel }),
+                    //   shrink: 'false'
+                    // }}
                   />
                   <Field
                     required
@@ -71,7 +79,7 @@ const Signup = () => {
                     name="password"
                     type="password"
                     variant="outlined"
-                    
+                    // InputProps={{ classes: { input: classes.input } }}                    
                   />
                   <Field
                     className={classes.field}

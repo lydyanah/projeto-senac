@@ -20,7 +20,7 @@ const VisualizarItem = () => {
   return (
     <MemberPage>
       <section className="conteúdoCloset">
-        
+        <h1>Detalhes do item</h1>
            
 				<h1>{item?.nome}</h1>
 			

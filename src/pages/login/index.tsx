@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import { CheckboxWithLabel, TextField } from "formik-material-ui";
-import { Button, ThemeProvider, Typography, IconButton, InputAdornment } from "@material-ui/core";
-import {Visibility, VisibilityOff} from '@material-ui/icons';
+import {
+  Button,
+  ThemeProvider,
+  Typography,
+  IconButton,
+  InputAdornment,
+} from "@material-ui/core";
+import { Visibility, VisibilityOff } from "@material-ui/icons";
 import * as Yup from "yup";
 import Page from "../../components/Page/Page";
 import formStyles from "../../styles/formStyles";
@@ -16,6 +23,10 @@ const initialValues = {
 
 const Login = () => {
   const classes = formStyles();
+
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
+  const handleMouseDownPassword = () => setShowPassword(!showPassword);
 
   return (
     <>
@@ -36,20 +47,19 @@ const Login = () => {
                   .email("Formato inválido"),
                 password: Yup.string()
                   .required("Digite sua senha")
-                  .min(8, "Este campo é pequeno demais. Ele deveria ter 8 caracteres.")
+                  .min(
+                    8,
+                    "Este campo é pequeno demais. Ele deveria ter 8 caracteres."
+                  )
                   .matches(
                     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]$/,
                     "Sua senha não obedece a todos os requisitos (letra maiúscula e minúscula, número e símbolo)."
                   ),
               })}
-              
             >
               {({ submitForm, isSubmitting }) => (
                 <Form className={classes.form}>
-                  <Typography
-                    variant="h1">
-                    Entrar
-                  </Typography>
+                  <Typography variant="h1">Entrar</Typography>
                   <Field
                     className={classes.field}
                     component={TextField}
@@ -57,28 +67,28 @@ const Login = () => {
                     name="email"
                     type="email"
                     variant="outlined"
+                    inputProps={{legend : "none"}}
                   />
                   <Field
                     className={classes.field}
                     component={TextField}
                     label="Senha"
                     name="password"
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     variant="outlined"
                     InputProps={{
-                      endAdornment:(
+                      endAdornment: (
                         <InputAdornment position="end">
                           <IconButton
                             aria-label="toggle password visibility"
-                            edge="end"
+                            onClick={handleClickShowPassword}
+                            onMouseDown={handleMouseDownPassword}
                           >
-                            <Visibility />
-
-                            <VisibilityOff />
+                            {showPassword ? ( <Visibility /> ) : ( <VisibilityOff /> )}
                           </IconButton>
                         </InputAdornment>
-                      )
-                  }}
+                      ),
+                    }}
                   />
                   <Field
                     component={CheckboxWithLabel}

@@ -16,7 +16,7 @@ const initialValues = {};
 
 const AddItem = () => {
   // const classes = formStyles();
-  
+
   return (
     <>
       <Page>
@@ -51,23 +51,23 @@ const AddItem = () => {
                       />
                     </Button>
                     <div>
-                    <h2>Categoria</h2>
-                    <Field
-                      name="categoria"
-                      component={Select}
-                      multiple
-                      variant="outlined" 
-                  />
+                      <h2>Categoria</h2>
+                      <Field
+                        name="categoria"
+                        component={Select}
+                        multiple
+                        variant="outlined"
+                      />
                     </div>
                     <div>
-                    <h2>Subcategoria</h2>
-                    <Field
-                      name="subcategoria"
-                      component={Select}
-                      multiple
-                      variant="outlined" 
-                  />
-                  </div>
+                      <h2>Subcategoria</h2>
+                      <Field
+                        name="subcategoria"
+                        component={Select}
+                        multiple
+                        variant="outlined"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h2>Cores</h2>
@@ -76,7 +76,7 @@ const AddItem = () => {
                       name="cores"
                       type="text"
                       variant="outlined"
-                  />
+                    />
                   </div>
                   <div>
                     <h2>Tamanho</h2>
@@ -85,7 +85,7 @@ const AddItem = () => {
                       name="tamanho"
                       type="text"
                       variant="outlined"
-                  />
+                    />
                   </div>
                   <div>
                     <h2>Marca</h2>
@@ -94,7 +94,7 @@ const AddItem = () => {
                       name="marca"
                       type="text"
                       variant="outlined"
-                  />
+                    />
                   </div>
                   <div>
                     <h2>Tecido/Material</h2>
@@ -103,7 +103,7 @@ const AddItem = () => {
                       name="material"
                       type="text"
                       variant="outlined"
-                  />
+                    />
                   </div>
                   <div>
                     <h2>Cuidados</h2>
@@ -111,8 +111,8 @@ const AddItem = () => {
                       name="cuidados"
                       component={Select}
                       multiple
-                      variant="outlined" 
-                  />
+                      variant="outlined"
+                    />
                   </div>
                   <div>
                     <h2>Ocasiões</h2>
@@ -129,8 +129,8 @@ const AddItem = () => {
                       name="estações"
                       component={Select}
                       multiple
-                      variant="outlined" 
-                  />
+                      variant="outlined"
+                    />
                   </div>
                   <div>
                     <h2>Status</h2>
@@ -138,8 +138,8 @@ const AddItem = () => {
                       name="status"
                       component={Select}
                       multiple
-                      variant="outlined" 
-                  />
+                      variant="outlined"                      
+                    />
                   </div>
                   <div>
                     <h2>Custo</h2>
@@ -148,16 +148,17 @@ const AddItem = () => {
                       name="custo"
                       type="text"
                       variant="outlined"
-                  />
+                    />
                   </div>
                   <div>
-                  <h2>Data da Compra</h2>
+                    <h2>Data da Compra</h2>
                     <Field
                       component={KeyboardDatePicker}
                       name="data"
                       format="dd/MM/yy"
                       disableFuture="true"
                       inputVariant="outlined"
+                      cancelLabel="CANCELAR"
                     />
                   </div>
                   <div>
