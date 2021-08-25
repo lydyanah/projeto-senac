@@ -18,6 +18,7 @@ const Signup = () => {
 
   return (
     <>
+      <title>Cadastro</title>
       <Page>
         <section className={classes.root}>
           <ThemeProvider theme={theme}>

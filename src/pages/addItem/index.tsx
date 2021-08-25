@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from "formik";
 import { Select, TextField } from "formik-material-ui";
-import { Button } from "@material-ui/core";
+import { Button, FormControl, MenuItem } from "@material-ui/core";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import { KeyboardDatePicker } from "formik-material-ui-pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
@@ -12,16 +12,24 @@ import MemberPage from "../../components/memberPage/memberPage";
 // import theme from "../../styles/formTheme";
 import "./styles.css";
 
-const initialValues = {};
+const initialValues = {
+  categoria: [""],
+  subcategoria: [""],
+  ocasioes: [""],
+  estacoes: [""],
+  status: ["selecione"],
+};
 
 const AddItem = () => {
   // const classes = formStyles();
 
   return (
     <>
+      <title>Adicionar item</title>
       <MemberPage>
         {/* <section className={classes.root}>
           <ThemeProvider theme={theme}> */}
+
         <section className="adicionarItem">
           <MuiPickersUtilsProvider utils={DateFnsUtils} locale={brLocale}>
             <Formik
@@ -51,118 +59,170 @@ const AddItem = () => {
                       />
                     </Button>
                     <div>
-                      <h2>Categoria</h2>
-                      <Field
-                        name="categoria"
-                        component={Select}
-                        multiple
-                        variant="outlined"
-                      />
+                      <FormControl>
+                        <label htmlFor="categoria">Categoria</label>
+                        <Field
+                          name="categoria"
+                          component={Select}
+                          variant="outlined"
+                          inputProps={{ id: "categoria" }}
+                        >
+                          <MenuItem disabled value="">
+                            <em>Selecione</em>
+                          </MenuItem>
+                          <MenuItem value="roupas">Roupas</MenuItem>
+                          <MenuItem value="sapatos">Sapatos</MenuItem>
+                          <MenuItem value="acessorios">Acessórios</MenuItem>
+                        </Field>
+                      </FormControl>
                     </div>
                     <div>
-                      <h2>Subcategoria</h2>
-                      <Field
-                        name="subcategoria"
-                        component={Select}
-                        multiple
-                        variant="outlined"
-                      />
+                      <FormControl>
+                        <label htmlFor="subcategoria">Subcategoria</label>
+                        <Field
+                          name="subcategoria"
+                          component={Select}
+                          variant="outlined"
+                          inputProps={{ id: "subcategoria" }}
+                        >
+                          <MenuItem value="">
+                            <em>Selecione</em>
+                          </MenuItem>
+                        </Field>
+                      </FormControl>
                     </div>
                   </div>
                   <div>
-                    <h2>Cores</h2>
+                    <label htmlFor="cores">Cores</label>
                     <Field
                       component={TextField}
                       name="cores"
-                      type="text"
+                      type="color"
                       variant="outlined"
+                      inputProps={{ id: "cores" }}
                     />
                   </div>
                   <div>
-                    <h2>Tamanho</h2>
+                    <label htmlFor="tamanho">Tamanho</label>
                     <Field
                       component={TextField}
                       name="tamanho"
                       type="text"
                       variant="outlined"
+                      inputProps={{ id: "tamanho" }}
                     />
                   </div>
                   <div>
-                    <h2>Marca</h2>
+                    <label htmlFor="marca">Marca</label>
                     <Field
                       component={TextField}
                       name="marca"
                       type="text"
                       variant="outlined"
+                      inputProps={{ id: "marca" }}
                     />
                   </div>
                   <div>
-                    <h2>Tecido/Material</h2>
+                    <label htmlFor="material">Tecido/Material</label>
                     <Field
                       component={TextField}
                       name="material"
                       type="text"
                       variant="outlined"
+                      inputProps={{ id: "material" }}
                     />
                   </div>
                   <div>
-                    <h2>Cuidados</h2>
+                    <label htmlFor="cuidados">Cuidados</label>
                     <Field
                       name="cuidados"
                       component={Select}
                       multiple
                       variant="outlined"
+                      inputProps={{ id: "cuidados" }}
                     />
                   </div>
                   <div>
-                    <h2>Ocasiões</h2>
-                    <Field
-                      component={TextField}
-                      name="ocasiões"
-                      type="text"
-                      variant="outlined"
-                    />
+                    <FormControl>
+                      <label htmlFor="ocasioes">Ocasiões</label>
+                      <Field
+                        component={Select}
+                        name="ocasioes"
+                        type="text"
+                        multiple
+                        variant="outlined"
+                        inputProps={{ id: "ocasioes" }}
+                      >
+                        <MenuItem value="casual">Casual</MenuItem>
+                        <MenuItem value="trabalho">Trabalho</MenuItem>
+                        <MenuItem value="social">Social</MenuItem>
+                        <MenuItem value="esporte">Esporte</MenuItem>
+                        <MenuItem value="festa">Festa</MenuItem>
+                      </Field>
+                    </FormControl>
                   </div>
-                  <div>
-                    <h2>Estações</h2>
+                  <FormControl>
+                    <label htmlFor="estacoes">Estações</label>
                     <Field
-                      name="estações"
+                      name="estacoes"
                       component={Select}
-                      multiple
+                      multiple={true}
                       variant="outlined"
-                    />
+                      inputProps={{ id: "estacoes" }}
+                    >
+                      <MenuItem value="primavera">Primavera</MenuItem>
+                      <MenuItem value="verão">Verão</MenuItem>
+                      <MenuItem value="outono">Outono</MenuItem>
+                      <MenuItem value="inverno">Inverno</MenuItem>
+                    </Field>
+                  </FormControl>
+                  <div>
+                    <FormControl>
+                      <label htmlFor="status">Status</label>
+                      <Field
+                        name="status"
+                        component={Select}
+                        variant="outlined"
+                        inputProps={{ id: "status" }}
+                      >
+                        <MenuItem value="selecione">
+                          <em>Selecione</em>
+                        </MenuItem>
+                        <MenuItem value="Disponível">Disponível</MenuItem>
+                        <MenuItem value="Em uso">Em uso</MenuItem>
+                        <MenuItem value="Para lavar">Para lavar</MenuItem>
+                        <MenuItem value="Para passar">Para passar</MenuItem>
+                        <MenuItem value="Conserto">Conserto</MenuItem>
+                        <MenuItem value="Emprestada(o)">Emprestada(o)</MenuItem>
+                        <MenuItem value="Doação">Doação</MenuItem>
+                        <MenuItem value="Descarte">Descarte</MenuItem>
+                      </Field>
+                    </FormControl>
                   </div>
                   <div>
-                    <h2>Status</h2>
-                    <Field
-                      name="status"
-                      component={Select}
-                      multiple
-                      variant="outlined"                      
-                    />
-                  </div>
-                  <div>
-                    <h2>Custo</h2>
+                    <label htmlFor="custo">Custo</label>
                     <Field
                       component={TextField}
                       name="custo"
                       type="text"
                       variant="outlined"
+                      inputProps={{ id: "custo" }}
                     />
                   </div>
                   <div>
-                    <h2>Data da Compra</h2>
+                    <label htmlFor="dataCompra">Data da Compra</label>
                     <Field
                       component={KeyboardDatePicker}
-                      name="data"
+                      name="dataCompra"
                       format="dd/MM/yy"
                       disableFuture="true"
                       inputVariant="outlined"
                       cancelLabel="CANCELAR"
+                      inputProps={{ id: "dataCompra" }}
                     />
                   </div>
                   <div>
-                    <h2>Notas</h2>
+                    <label htmlFor="notas">Notas</label>
                     <Field
                       component={TextField}
                       name="notas"
@@ -170,10 +230,11 @@ const AddItem = () => {
                       multiline={true}
                       rows={3}
                       variant="outlined"
+                      inputProps={{ id: "notas" }}
                     />
                   </div>
                   <div>
-                    <h2>Tags</h2>
+                    <label htmlFor="tags">Tags</label>
                     <Field
                       component={TextField}
                       name="tags"
@@ -181,6 +242,7 @@ const AddItem = () => {
                       variant="outlined"
                       placeholder="Adicione tags"
                       helperText="Insira uma vírgula depois de cada tag"
+                      inputProps={{ id: "tags" }}
                     />
                   </div>
                   <div>
