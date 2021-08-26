@@ -27,21 +27,10 @@ const formStyles = makeStyles(theme => ({
     field: {
         marginTop: theme.spacing(2),
     },
-
-    // input:{           
-    //     padding: '0 10px',
-    //     height: 35,
-    // },
     
     submitButton: {
         marginTop: theme.spacing(2),
     },
-
-    // inputLabel: {
-    //     fontWeight: 600,
-    //     transform: 'none',
-    //     position: 'relative'
-    // },
 
     label: {
         fontSize: 20,

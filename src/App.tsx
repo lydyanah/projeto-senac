@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/cadastro" component={Signup} />
         <Route path="/closet" exact component={Closet} />
         <Route path="/adicionar-item" component={AddItem} />
-        <Route path="/closet/:id" component={VisualizarItem} />
+        <Route path="/closet/itens/:id" component={VisualizarItem} />
       </Switch>
     </BrowserRouter>
   

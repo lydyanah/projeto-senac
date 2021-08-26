@@ -5,7 +5,7 @@ const theme = createTheme({
   typography: {
     fontFamily: "Assistant",
     body1: {
-      fontSize: 20,
+      fontSize: '1em',
     },
 
     h1: {

@@ -25,7 +25,7 @@ const Closet = () => {
           {itens.map((item) => {
             return (
               <li key={item.id}>
-                <Link to={`/itens/${item.id}`}>{item.nome}</Link>
+                <Link to={`/closet/itens/${item.id}`}>{item.nome}</Link>
               </li>
             );
           })}

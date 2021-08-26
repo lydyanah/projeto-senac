@@ -1,14 +1,8 @@
-section.adicionarItem{
-    display: flex;
+.MuiGrid{
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-.cadastroItemForm{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 400px ;
+.MuiGrid-item{
+    height: 200px;
 }
-
-
