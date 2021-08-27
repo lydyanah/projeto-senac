@@ -1,22 +1,23 @@
 import { Field, Form, Formik } from "formik";
 import { Select, TextField } from "formik-material-ui";
-import { Button, MenuItem, ThemeProvider, Grid } from "@material-ui/core";
+import { Button, MenuItem, ThemeProvider } from "@material-ui/core";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import { KeyboardDatePicker } from "formik-material-ui-pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 import brLocale from "date-fns/locale/pt-BR";
-import * as Yup from "yup";
+// import * as Yup from "yup";
+import api from "../../services/api";
 import MemberPage from "../../components/memberPage/memberPage";
 import theme from "../../styles/formTheme";
 import "./styles.css";
 
 const initialValues = {
-  categoria: [""],
-  subcategoria: [""],
+  categoria: "",
+  subcategoria: "",
   ocasioes: [""],
   estacoes: [""],
-  status: ["selecione"],
+  status: "selecione",
   tamanho: "",
   marca: "",
   material: "",
@@ -29,200 +30,213 @@ const initialValues = {
 const AddItem = () => {
   return (
     <>
-      <title>Adicionar item</title>
       <MemberPage>
         <ThemeProvider theme={theme}>
           <section className="adicionarItem">
             <MuiPickersUtilsProvider utils={DateFnsUtils} locale={brLocale}>
               <Formik
                 initialValues={initialValues}
-                onSubmit={(values, { setSubmitting }) => {
-                  setTimeout(() => {
+                onSubmit={ async (values, { setSubmitting }) => {
+                  try {
+                    const response = await api.post("/itens", {
+                      categoria: values.categoria,
+                      subcategoria: values.subcategoria,
+                      tamanho: values.tamanho,
+                      marca: values.marca,
+                      nome: "nome teste",
+                      descricao: "descrição teste",
+                      cor: "cor teste",
+                      lookId: 1,
+                    })
+                    if (response.status === 201) {
+                      alert("Cadastro realizado com sucesso")
+                      console.log("Cadastrado com sucesso")
+                    }
+                    else { console.log("Ocorreu uma falha")}
                     setSubmitting(false);
-                    alert(JSON.stringify(values, null, 2));
-                  }, 500);
+                  } catch (error) {
+                    console.log(`Ocorreu uma falha ${error}`)
+                  }
                 }}
                 // validationSchema={}
               >
                 {({ submitForm, isSubmitting }) => (
                   <Form className="cadastroItem">
-                    <Grid className="MuiGrid">
-                      <Grid item className="MuiGrid-item" xs={12}>
-                        <h1>Adicionar Item</h1>
-                        <Button
-                          variant="contained"
-                          component="label"
-                          startIcon={<PhotoCamera />}
-                        >
-                          Carregar imagem
-                          <input
-                            accept="image/jpeg, image/png"
-                            type="file"
-                            hidden
-                          />
-                        </Button>
-                      </Grid>
-                      <Grid container className="MuiGrid">
-                        <Grid item className="MuiGrid-item" xs={2}>
-                          <label htmlFor="categoria">Categoria</label>
-                          <Field
-                            className="teste"
-                            name="categoria"
-                            component={Select}
-                            variant="outlined"
-                            inputProps={{ id: "categoria" }}
-                          >
-                            <MenuItem disabled value="">
-                              <em>Selecione</em>
-                            </MenuItem>
-                            <MenuItem value="roupas">Roupas</MenuItem>
-                            <MenuItem value="sapatos">Sapatos</MenuItem>
-                            <MenuItem value="acessorios">Acessórios</MenuItem>
-                          </Field>
-                        </Grid>
-                        <label htmlFor="subcategoria">Subcategoria</label>
-                        <Field
-                          name="subcategoria"
-                          component={Select}
-                          variant="outlined"
-                          inputProps={{ id: "subcategoria" }}
-                        >
-                          <MenuItem value="">
-                            <em>Selecione</em>
-                          </MenuItem>
-                        </Field>
-                        <label htmlFor="tamanho">Tamanho</label>
-                        <Field
-                          component={TextField}
-                          name="tamanho"
-                          type="text"
-                          variant="outlined"
-                          inputProps={{ id: "tamanho" }}
-                        />
+                    <h1>Adicionar Item</h1>
+                    <Button
+                      variant="contained"
+                      component="label"
+                      startIcon={<PhotoCamera />}
+                    >
+                      Carregar imagem
+                      <input
+                        accept="image/jpeg, image/png"
+                        type="file"
+                        hidden
+                      />
+                    </Button>
 
-                        <label htmlFor="marca">Marca</label>
-                        <Field
-                          component={TextField}
-                          name="marca"
-                          type="text"
-                          variant="outlined"
-                          inputProps={{ id: "marca" }}
-                        />
+                    <label htmlFor="categoria">Categoria</label>
+                    <Field
+                      className="teste"
+                      name="categoria"
+                      component={Select}
+                      variant="outlined"
+                      inputProps={{ id: "categoria" }}
+                    >
+                      <MenuItem disabled value="">
+                        <em>Selecione</em>
+                      </MenuItem>
+                      <MenuItem value="roupas">Roupas</MenuItem>
+                      <MenuItem value="sapatos">Sapatos</MenuItem>
+                      <MenuItem value="acessorios">Acessórios</MenuItem>
+                    </Field>
 
-                        <label htmlFor="material">Tecido/Material</label>
-                        <Field
-                          component={TextField}
-                          name="material"
-                          type="text"
-                          variant="outlined"
-                          inputProps={{ id: "material" }}
-                        />
+                    <label htmlFor="subcategoria">Subcategoria</label>
+                    <Field
+                      name="subcategoria"
+                      component={Select}
+                      variant="outlined"
+                      inputProps={{ id: "subcategoria" }}
+                    >
+                      <MenuItem value="">
+                        <em>Selecione</em>
+                      </MenuItem>
+                      <MenuItem value="esporte">Esporte</MenuItem>
+                      <MenuItem value="pijamas">Pijamas</MenuItem>
+                      <MenuItem value="agasalhos">Agasalhos</MenuItem>
+                    </Field>                    
+                   
+                    <label htmlFor="tamanho">Tamanho</label>
+                    <Field
+                      component={TextField}
+                      name="tamanho"
+                      type="text"
+                      variant="outlined"
+                      inputProps={{ id: "tamanho" }}
+                    />
 
-                        <label htmlFor="ocasioes">Ocasiões</label>
-                        <Field
-                          component={Select}
-                          name="ocasioes"
-                          type="text"
-                          multiple
-                          variant="outlined"
-                          inputProps={{ id: "ocasioes" }}
-                        >
-                          <MenuItem value="casual">Casual</MenuItem>
-                          <MenuItem value="trabalho">Trabalho</MenuItem>
-                          <MenuItem value="social">Social</MenuItem>
-                          <MenuItem value="esporte">Esporte</MenuItem>
-                          <MenuItem value="festa">Festa</MenuItem>
-                        </Field>
+                    <label htmlFor="marca">Marca</label>
+                    <Field
+                      component={TextField}
+                      name="marca"
+                      type="text"
+                      variant="outlined"
+                      inputProps={{ id: "marca" }}
+                    />
 
-                        <label htmlFor="estacoes">Estações</label>
-                        <Field
-                          name="estacoes"
-                          component={Select}
-                          multiple={true}
-                          variant="outlined"
-                          inputProps={{ id: "estacoes" }}
-                        >
-                          <MenuItem value="primavera">Primavera</MenuItem>
-                          <MenuItem value="verão">Verão</MenuItem>
-                          <MenuItem value="outono">Outono</MenuItem>
-                          <MenuItem value="inverno">Inverno</MenuItem>
-                        </Field>
+                    <label htmlFor="material">Tecido/Material</label>
+                    <Field
+                      component={TextField}
+                      name="material"
+                      type="text"
+                      variant="outlined"
+                      inputProps={{ id: "material" }}
+                    />
 
-                        <label htmlFor="status">Status</label>
-                        <Field
-                          name="status"
-                          component={Select}
-                          variant="outlined"
-                          inputProps={{ id: "status" }}
-                        >
-                          <MenuItem value="selecione">
-                            <em>Selecione</em>
-                          </MenuItem>
-                          <MenuItem value="Disponível">Disponível</MenuItem>
-                          <MenuItem value="Em uso">Em uso</MenuItem>
-                          <MenuItem value="Para lavar">Para lavar</MenuItem>
-                          <MenuItem value="Para passar">Para passar</MenuItem>
-                          <MenuItem value="Conserto">Conserto</MenuItem>
-                          <MenuItem value="Emprestada(o)">
-                            Emprestada(o)
-                          </MenuItem>
-                          <MenuItem value="Doação">Doação</MenuItem>
-                          <MenuItem value="Descarte">Descarte</MenuItem>
-                        </Field>
+                    <label htmlFor="ocasioes">Ocasiões</label>
+                    <Field
+                      component={Select}
+                      name="ocasioes"
+                      type="text"
+                      multiple
+                      variant="outlined"
+                      inputProps={{ id: "ocasioes" }}
+                    >
+                      <MenuItem value="casual">Casual</MenuItem>
+                      <MenuItem value="trabalho">Trabalho</MenuItem>
+                      <MenuItem value="social">Social</MenuItem>
+                      <MenuItem value="esporte">Esporte</MenuItem>
+                      <MenuItem value="festa">Festa</MenuItem>
+                    </Field>
 
-                        <label htmlFor="custo">Custo</label>
-                        <Field
-                          component={TextField}
-                          name="custo"
-                          type="text"
-                          variant="outlined"
-                          inputProps={{ id: "custo" }}
-                        />
+                    <label htmlFor="estacoes">Estações</label>
+                    <Field
+                      name="estacoes"
+                      component={Select}
+                      multiple={true}
+                      variant="outlined"
+                      inputProps={{ id: "estacoes" }}
+                    >
+                      <MenuItem value="primavera">Primavera</MenuItem>
+                      <MenuItem value="verão">Verão</MenuItem>
+                      <MenuItem value="outono">Outono</MenuItem>
+                      <MenuItem value="inverno">Inverno</MenuItem>
+                    </Field>
 
-                        <label htmlFor="dataCompra">Data da Compra</label>
-                        <Field
-                          component={KeyboardDatePicker}
-                          name="dataCompra"
-                          format="dd/MM/yy"
-                          disableFuture="true"
-                          inputVariant="outlined"
-                          cancelLabel="CANCELAR"
-                          inputProps={{ id: "dataCompra" }}
-                        />
+                    <label htmlFor="status">Status</label>
+                    <Field
+                      name="status"
+                      component={Select}
+                      variant="outlined"
+                      inputProps={{ id: "status" }}
+                    >
+                      <MenuItem value="selecione">
+                        <em>Selecione</em>
+                      </MenuItem>
+                      <MenuItem value="Disponível">Disponível</MenuItem>
+                      <MenuItem value="Em uso">Em uso</MenuItem>
+                      <MenuItem value="Para lavar">Para lavar</MenuItem>
+                      <MenuItem value="Para passar">Para passar</MenuItem>
+                      <MenuItem value="Conserto">Conserto</MenuItem>
+                      <MenuItem value="Emprestada(o)">Emprestada(o)</MenuItem>
+                      <MenuItem value="Doação">Doação</MenuItem>
+                      <MenuItem value="Descarte">Descarte</MenuItem>
+                    </Field>
 
-                        <label htmlFor="notas">Notas</label>
-                        <Field
-                          component={TextField}
-                          name="notas"
-                          type="text"
-                          multiline={true}
-                          rows={3}
-                          variant="outlined"
-                          inputProps={{ id: "notas" }}
-                        />
+                    <label htmlFor="custo">Custo</label>
+                    <Field
+                      component={TextField}
+                      name="custo"
+                      type="text"
+                      variant="outlined"
+                      inputProps={{ id: "custo" }}
+                    />
 
-                        <label htmlFor="tags">Tags</label>
-                        <Field
-                          component={TextField}
-                          name="tags"
-                          type="text"
-                          variant="outlined"
-                          placeholder="Adicione tags"
-                          helperText="Insira uma vírgula depois de cada tag"
-                          inputProps={{ id: "tags" }}
-                        />
-                      </Grid>
-                      <Button
-                        color="primary"
-                        disabled={isSubmitting}
-                        disableElevation
-                        onClick={submitForm}
-                        variant="contained"
-                      >
-                        Adicionar
-                      </Button>
-                      {isSubmitting}
-                    </Grid>
+                    <label htmlFor="dataCompra">Data da Compra</label>
+                    <Field
+                      component={KeyboardDatePicker}
+                      name="dataCompra"
+                      format="dd/MM/yy"
+                      disableFuture="true"
+                      inputVariant="outlined"
+                      cancelLabel="CANCELAR"
+                      inputProps={{ id: "dataCompra" }}
+                      fontSize="small"
+                    />
+
+                    <label htmlFor="notas">Notas</label>
+                    <Field
+                      component={TextField}
+                      name="notas"
+                      type="text"
+                      multiline={true}
+                      rows={3}
+                      variant="outlined"
+                      inputProps={{ id: "notas" }}
+                    />
+
+                    <label htmlFor="tags">Tags</label>
+                    <Field
+                      component={TextField}
+                      name="tags"
+                      type="text"
+                      variant="outlined"
+                      placeholder="Adicione tags"
+                      helperText="Insira uma vírgula depois de cada tag"
+                      inputProps={{ id: "tags" }}
+                    />
+
+                    <Button
+                      color="primary"
+                      disabled={isSubmitting}
+                      disableElevation
+                      onClick={submitForm}
+                      variant="contained"
+                    >
+                      Adicionar
+                    </Button>
+                    {isSubmitting}
                   </Form>
                 )}
               </Formik>

@@ -1,8 +1,0 @@
-.MuiGrid{
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.MuiGrid-item{
-    height: 200px;
-}
