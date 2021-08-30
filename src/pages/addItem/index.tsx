@@ -6,8 +6,8 @@ import { KeyboardDatePicker } from "formik-material-ui-pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 import brLocale from "date-fns/locale/pt-BR";
-// import * as Yup from "yup";
 import api from "../../services/api";
+import itemValidation from "./itemValidation";
 import MemberPage from "../../components/memberPage/memberPage";
 import theme from "../../styles/formTheme";
 import "./styles.css";
@@ -17,12 +17,12 @@ const initialValues = {
   subcategoria: "",
   ocasioes: [""],
   estacoes: [""],
-  status: "selecione",
+  status: "",
   tamanho: "",
   marca: "",
   material: "",
   custo: "",
-  dataCompra: new Date(),
+  dataCompra: "",
   notas: "",
   tags: "",
 };
@@ -58,7 +58,7 @@ const AddItem = () => {
                     console.log(`Ocorreu uma falha ${error}`)
                   }
                 }}
-                // validationSchema={}
+                validationSchema={itemValidation}
               >
                 {({ submitForm, isSubmitting }) => (
                   <Form className="cadastroItem">
@@ -171,7 +171,7 @@ const AddItem = () => {
                       variant="outlined"
                       inputProps={{ id: "status" }}
                     >
-                      <MenuItem value="selecione">
+                      <MenuItem value="">
                         <em>Selecione</em>
                       </MenuItem>
                       <MenuItem value="Disponível">Disponível</MenuItem>
@@ -201,6 +201,7 @@ const AddItem = () => {
                       disableFuture="true"
                       inputVariant="outlined"
                       cancelLabel="CANCELAR"
+                      invalidDateMessage=""
                       inputProps={{ id: "dataCompra" }}
                       fontSize="small"
                     />
