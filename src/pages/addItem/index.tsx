@@ -51,6 +51,8 @@ const AddItem = () => {
                       ocasioesLook: values.ocasioes,
                       notasItem: values.notas,
                       tagsItem: values.tags,
+                      cor: "",
+                      cuidados: "",
                     })
                     if (response.status === 201) {
                       alert("Cadastro realizado com sucesso")
