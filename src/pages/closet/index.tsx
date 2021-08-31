@@ -31,7 +31,7 @@ const Closet = () => {
           })}
         </ul>
 
-        <Link to="/adicionar-item">
+        <Link to="/adicionar-item" className="button">
           Adicionar Item
         </Link>
       </section>
