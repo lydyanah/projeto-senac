@@ -22,9 +22,8 @@ const VisualizarItem = () => {
       <section className="conteúdoCloset">
         <h1>Detalhes do item</h1>
            
-				<h1>{item?.nome}</h1>
 			
-				<p>{item?.descricao}</p>
+				<p>{item?.categoria}</p>
 	
       </section>
     </MemberPage>

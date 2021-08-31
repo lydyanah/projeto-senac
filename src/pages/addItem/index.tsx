@@ -43,10 +43,14 @@ const AddItem = () => {
                       subcategoria: values.subcategoria,
                       tamanho: values.tamanho,
                       marca: values.marca,
-                      nome: "nome teste",
-                      descricao: "descrição teste",
-                      cor: "cor teste",
-                      lookId: 1,
+                      material: values.material,
+                      preco: values.custo,
+                      dataCompra: values.dataCompra,
+                      status: values.status,
+                      estacaoLook: values.estacoes,
+                      ocasioesLook: values.ocasioes,
+                      notasItem: values.notas,
+                      tagsItem: values.tags,
                     })
                     if (response.status === 201) {
                       alert("Cadastro realizado com sucesso")
