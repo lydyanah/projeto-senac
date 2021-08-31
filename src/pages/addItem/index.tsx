@@ -91,9 +91,9 @@ const AddItem = () => {
                       <MenuItem disabled value="">
                         <em>Selecione</em>
                       </MenuItem>
-                      <MenuItem value="roupas">Roupas</MenuItem>
-                      <MenuItem value="sapatos">Sapatos</MenuItem>
-                      <MenuItem value="acessorios">Acessórios</MenuItem>
+                      <MenuItem value="Roupas">Roupas</MenuItem>
+                      <MenuItem value="Sapatos">Sapatos</MenuItem>
+                      <MenuItem value="Acessórios">Acessórios</MenuItem>
                     </Field>
 
                     <label htmlFor="subcategoria">Subcategoria</label>
@@ -106,9 +106,9 @@ const AddItem = () => {
                       <MenuItem value="">
                         <em>Selecione</em>
                       </MenuItem>
-                      <MenuItem value="esporte">Esporte</MenuItem>
-                      <MenuItem value="pijamas">Pijamas</MenuItem>
-                      <MenuItem value="agasalhos">Agasalhos</MenuItem>
+                      <MenuItem value="Piscina">Esporte</MenuItem>
+                      <MenuItem value="Pijamas">Pijamas</MenuItem>
+                      <MenuItem value="Agasalhos">Agasalhos</MenuItem>
                     </Field>                    
                    
                     <label htmlFor="tamanho">Tamanho</label>
@@ -147,11 +147,11 @@ const AddItem = () => {
                       variant="outlined"
                       inputProps={{ id: "ocasioes" }}
                     >
-                      <MenuItem value="casual">Casual</MenuItem>
-                      <MenuItem value="trabalho">Trabalho</MenuItem>
-                      <MenuItem value="social">Social</MenuItem>
-                      <MenuItem value="esporte">Esporte</MenuItem>
-                      <MenuItem value="festa">Festa</MenuItem>
+                      <MenuItem value="Casual">Casual</MenuItem>
+                      <MenuItem value="Trabalho">Trabalho</MenuItem>
+                      <MenuItem value="Social">Social</MenuItem>
+                      <MenuItem value="Esporte">Esporte</MenuItem>
+                      <MenuItem value="Festa">Festa</MenuItem>
                     </Field>
 
                     <label htmlFor="estacoes">Estações</label>
@@ -162,10 +162,10 @@ const AddItem = () => {
                       variant="outlined"
                       inputProps={{ id: "estacoes" }}
                     >
-                      <MenuItem value="primavera">Primavera</MenuItem>
-                      <MenuItem value="verão">Verão</MenuItem>
-                      <MenuItem value="outono">Outono</MenuItem>
-                      <MenuItem value="inverno">Inverno</MenuItem>
+                      <MenuItem value="Primavera">Primavera</MenuItem>
+                      <MenuItem value="Verão">Verão</MenuItem>
+                      <MenuItem value="Outono">Outono</MenuItem>
+                      <MenuItem value="Inverno">Inverno</MenuItem>
                     </Field>
 
                     <label htmlFor="status">Status</label>
